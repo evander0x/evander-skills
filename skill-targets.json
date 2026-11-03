@@ -1,0 +1,12 @@
+{
+  "global_targets": {
+    "codex": "~/.codex/skills/skills",
+    "codebuddy": "~/.codebuddy/skills",
+    "lingma": "~/.lingma/skills",
+    "claude": "~/.claude/skills",
+    "qoder_cn": "~/.qoder-cn/skills"
+  },
+  "cursor_export_dir": "exports/cursor-rules",
+  "cursor_projects": [],
+  "project_install_dirs": [".codebuddy/skills"]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "example-skill"
+  short_description: "示例技能：演示本仓库的技能目录结构与资源约定，可作为新建技能的起点，也可用于验证安装到本地项目的流程。"
+  default_prompt: "使用 $example-skill 完成对应任务。"

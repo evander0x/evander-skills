@@ -1,0 +1,13 @@
+.DS_Store
+exports/
+scripts/__pycache__/
+*.pyc
+tests
+blacklist.json
+docs
+
+# 本地规划、草稿等非交付材料
+/.local-notes/
+
+# IDE 本地工作产物
+.codebuddy/
