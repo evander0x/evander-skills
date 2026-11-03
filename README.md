@@ -132,22 +132,3 @@ SKILL.md 的 `description` 决定技能会不会被触发，要写清具体场�
 }
 ```
 
-## 多 Git 账号隔离
-
-公司仓库用公司账号、个人仓库用个人账号时，用 `includeIf` 按目录切换，不用逐个仓库配置：
-
-```bash
-# 默认把 ~/projects/wcj 及其子目录切到 evander0x，其他目录沿用全局账号
-bash scripts/setup-git-identity.sh
-
-# 自定义目录或邮箱
-PERSONAL_DIR=~/projects/personal PERSONAL_EMAIL=me@example.com bash scripts/setup-git-identity.sh
-```
-
-脚本做三件事：写入 `~/.gitconfig-evander`、在 `~/.gitconfig` 追加 `includeIf "gitdir:<目录>/"`、打印当前生效身份。重复执行安全（已有规则会跳过），改动全局配置前会备份成 `~/.gitconfig.bak-<时间>`。
-
-注意：
-
-- 只影响**提交署名**，不影响推送权限。推送 GitHub 仍需对应账号的 HTTPS Token 或 SSH key。
-- 仓库级 `user.name` 优先级高于 `includeIf`，曾单独设置过的仓库需先 `git -C <仓库> config --unset user.name`。
-- 个人项目走 SSH 时，给个人 key 单独起别名（如 `Host github-evander`），避免和公司 key 冲突。
