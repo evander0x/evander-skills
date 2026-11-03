@@ -1,0 +1,4 @@
+interface:
+  display_name: "smart-commit"
+  short_description: "根据 git 暂存/未暂存的变更自动生成简洁清晰的提交说明，并执行 git add / commit（可选 push）。当用户说「提交代码」「写个 commit」「生成提交信息并 commit」「帮我把改动提交一下」时使用。"
+  default_prompt: "使用 $smart-commit 完成对应任务。"
